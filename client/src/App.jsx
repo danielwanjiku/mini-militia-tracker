@@ -1,26 +1,17 @@
-import { Button } from "./button"
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Login from './Pages/Login';
+import SignUp from './Pages/SignUp';
 
-function App(){
-  const willDelete=()=>{console.log("deleted")}
-  const handleAlert=()=>alert("warning")
-
+function App() {
   return (
-    <>
-
-      <h1>Buttons with different functions</h1>
-      <Button
-      label="delete"
-      onClick={willDelete}
-      />
-      <br />
-      <br />
-      <Button
-      label="alert"
-      onClick={handleAlert}
-      />
-
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
+
