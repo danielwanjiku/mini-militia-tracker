@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Homepage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-cyan-950 to-emerald-900 text-white">
+    <div className="min-h-screen bg-linear-to-br from-slate-950 via-cyan-950 to-emerald-900 text-white">
       <div className="mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 py-16 lg:px-8">
         <div className="max-w-3xl">
           <span className="inline-flex rounded-full bg-emerald-200/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.24em] text-emerald-200">
@@ -31,28 +31,6 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="mt-16 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20 backdrop-blur-xl sm:mt-20">
-          <div className="grid gap-6 sm:grid-cols-3">
-            <div className="rounded-3xl bg-white/5 p-6 text-slate-100">
-              <h2 className="text-xl font-semibold">Fast access</h2>
-              <p className="mt-3 text-sm leading-6 text-slate-300">
-                Jump straight into login or signup and get back to your squad faster.
-              </p>
-            </div>
-            <div className="rounded-3xl bg-white/5 p-6 text-slate-100">
-              <h2 className="text-xl font-semibold">Session-ready</h2>
-              <p className="mt-3 text-sm leading-6 text-slate-300">
-                Keep your match history, player stats, and team setup organized in one dashboard.
-              </p>
-            </div>
-            <div className="rounded-3xl bg-white/5 p-6 text-slate-100">
-              <h2 className="text-xl font-semibold">Designed for players</h2>
-              <p className="mt-3 text-sm leading-6 text-slate-300">
-                A clean, responsive landing page built for the Mini Militia community.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
