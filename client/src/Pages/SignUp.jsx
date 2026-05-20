@@ -4,8 +4,6 @@ import { Link, useNavigate } from 'react-router-dom';
 export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [termsAccepted, setTermsAccepted] = useState(false);
   const navigate = useNavigate();
 
   const handleSignUp = (e) => {
@@ -43,7 +41,7 @@ export default function SignUp() {
             </label>
             <div className="relative">
               <input
-                type={showPassword ? 'text' : 'password'}
+                type="password"
                 id="password"
                 placeholder="Enter your password"
                 value={password}
@@ -52,19 +50,6 @@ export default function SignUp() {
                 className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 pr-12 text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100"
               />
             </div>
-          </div>
-
-          <div className="flex items-center gap-3 text-sm text-slate-700">
-            <input
-              type="checkbox"
-              id="terms"
-              checked={termsAccepted}
-              onChange={(e) => setTermsAccepted(e.target.checked)}
-              className="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
-            />
-            <label htmlFor="terms" className="select-none">
-              I accept the terms and privacy policy
-            </label>
           </div>
 
           <button
