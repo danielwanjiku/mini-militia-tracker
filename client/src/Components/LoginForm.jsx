@@ -58,9 +58,6 @@ export default function LoginForm() {
 
         <div className="mt-6 text-center text-sm text-slate-600 space-y-3">
           <p>
-            Forgot <Link to="#" className="text-emerald-700 hover:underline">Username / Password?</Link>
-          </p>
-          <p>
             Don&apos;t have an account?
             <Link to="/signup" className="ml-1 text-emerald-700 font-semibold hover:underline">
               Sign up
