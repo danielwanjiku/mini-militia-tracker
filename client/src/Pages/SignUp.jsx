@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const navigate = useNavigate();
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -14,6 +15,7 @@ export default function SignUp() {
       return;
     }
     console.log('Sign up with:', { email, password });
+    navigate('/dashboard');
   };
 
   const togglePasswordVisibility = () => {
@@ -124,7 +126,7 @@ export default function SignUp() {
 
         <p className="mt-6 text-center text-sm text-slate-600">
           Already have an account?{' '}
-          <Link to="/login" className="font-semibold text-emerald-700 hover:underline">
+          <Link to="/login" className="text-emerald-700 font-semibold hover:underline">
             Log in
           </Link>
         </p>

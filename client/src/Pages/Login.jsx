@@ -1,14 +1,16 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('Login submitted:', { email, password });
+    navigate('/dashboard');
   };
 
   return (
@@ -71,8 +73,10 @@ export default function Login() {
             Forgot <Link to="#" className="text-emerald-700 hover:underline">Username / Password?</Link>
           </p>
           <p>
-            Don&apos;t have an account?{' '}
-            <Link to="/signup" className="text-emerald-700 font-semibold hover:underline">Sign up</Link>
+            Don&apos;t have an account?
+            <Link to="/signup" className="ml-1 text-emerald-700 font-semibold hover:underline">
+              Sign up
+            </Link>
           </p>
         </div>
       </div>
