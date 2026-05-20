@@ -49,17 +49,6 @@ export default function Login() {
             />
           </div>
 
-          <div className="flex items-center gap-3 text-sm text-slate-700">
-            <input
-              id="show-password"
-              type="checkbox"
-              checked={showPassword}
-              onChange={() => setShowPassword((value) => !value)}
-              className="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
-            />
-            <label htmlFor="show-password">Show Password</label>
-          </div>
-
           <button
             type="submit"
             className="w-full rounded-xl bg-emerald-700 px-4 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-500/20 transition hover:bg-emerald-800"
