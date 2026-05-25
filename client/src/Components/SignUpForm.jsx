@@ -42,7 +42,7 @@ export default function SignUpForm() {
     setLoading(true);
 
     try {
-      const response = await fetch('/api/v1/auth/register', {
+      const response = await fetch('https://mini-militia-tracker.onrender.com/api/v1/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
