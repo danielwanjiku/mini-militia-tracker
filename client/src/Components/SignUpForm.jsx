@@ -59,7 +59,7 @@ export default function SignUpForm() {
 
       // Success (201 Created)
       console.log('Registration successful:', data);
-      navigate('/pages/dashboard');
+      navigate('/dashboard');
       
     } catch (err) {
       setError(err.message);

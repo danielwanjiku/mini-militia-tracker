@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Homepage from './Pages/Homepage';
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
-import { DashboardPage } from './Pages/Dashboard';
+import { Dashboard } from './Pages/Dashboard';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Route path="/" element={<Homepage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/dashboard" element={<DashboardPage />} />
+      <Route path="/dashboard" element={<Dashboard/>} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
