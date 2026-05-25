@@ -11,7 +11,7 @@ export default function LoginForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('Login submitted:', { email, password });
-    navigate('/dashboard');
+    navigate('pages/dashboard');
   };
     return (
         <div className="w-full max-w-md bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/60 p-8">
