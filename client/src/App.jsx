@@ -1,8 +1,9 @@
+// Main app router that maps each page to its URL.
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Homepage from './Pages/Homepage';
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
-import { Dashboard } from './Pages/Dashboard';
+import Dashboard from './Pages/Dashboard';
 
 function App() {
   return (

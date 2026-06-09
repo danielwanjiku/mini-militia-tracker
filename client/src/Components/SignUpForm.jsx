@@ -1,9 +1,10 @@
+// Sign-up form component for creating a new account.
 import React from "react";
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function SignUpForm() {
-  // 1. Expand state to accommodate all API-required fields
+  // Keep all signup form values in one object for easier handling.
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -20,7 +21,7 @@ export default function SignUpForm() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Unified change handler for clean code
+  // Update the matching field whenever the user types something.
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -28,7 +29,7 @@ export default function SignUpForm() {
     });
   };
 
-  // 2. Handle API form submission
+  // Send the new account details to the backend when the form is submitted.
   const handleSignUp = async (e) => {
     e.preventDefault();
     setError('');
@@ -42,7 +43,7 @@ export default function SignUpForm() {
     setLoading(true);
 
     try {
-      const response = await fetch('https://mini-militia-tracker.onrender.com/api/v1/auth/register', {
+      const response = await fetch('https://charity-minds-backend.onrender.com/api/v1/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,7 +60,7 @@ export default function SignUpForm() {
 
       // Success (201 Created)
       console.log('Registration successful:', data);
-      navigate('/dashboard');
+      navigate('/Login');
       
     } catch (err) {
       setError(err.message);

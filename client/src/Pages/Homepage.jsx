@@ -1,6 +1,8 @@
+// Landing page shown before users log in or sign up.
 import { Link } from 'react-router-dom';
 
 export default function Homepage() {
+  // This is the landing page shown before the user logs in.
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-950 via-cyan-950 to-emerald-900 text-white">
       <div className="mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 py-16 lg:px-8">
